@@ -28,6 +28,7 @@
                 <th>Название</th>
                 <th>Цена</th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -39,6 +40,9 @@
                     <td>[[${product.price}]]</td>
                     <td>
                         <a class="h4 mr-3" th:href="@{'/products/edit/' + ${product.id}}">Редактировать</a>
+                    </td>
+                    <td>
+                        <a class="h4 mr-3" th:href="@{'/products/delete/' + ${product.id}}">Удалить</a>
                     </td>
                 </tr>
             </th:block>
