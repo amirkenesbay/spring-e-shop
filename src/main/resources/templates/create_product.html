@@ -11,19 +11,27 @@
     <form th:action="@{/products/save}" method="post" th:object="${product}" style="max-width: 500px; margin: 0 auto;">
         <input type="hidden" th:field="*{id}">
         <div class="border border-secondary rounded p-3">
-            <th:block th:each="product : ${productList}">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Default radio
-                    </label>
-                </div>
-            </th:block>
-
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Категория</label>
+                <label class="col-sm-6 col-form-label">Выберите категорию товара</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{categoryId}" class="form-control" required minlength="8" maxlength="45">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Мониторы
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Смартфоны
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Процессоры
+                        </label>
+                    </div>
                 </div>
             </div>
             <br>
@@ -36,7 +44,7 @@
             </div>
             <br>
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Last Name:</label>
+                <label class="col-sm-4 col-form-label">Цена товара:</label>
                 <div class="col-sm-8">
                     <input type="text" th:field="*{price}" class="form-control" required minlength="2"
                            maxlength="45">
