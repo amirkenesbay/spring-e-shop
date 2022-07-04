@@ -1,6 +1,7 @@
 package com.amirkenesbay.eshop.service;
 
 import com.amirkenesbay.eshop.entity.Category;
+import com.amirkenesbay.eshop.entity.Product;
 import com.amirkenesbay.eshop.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,5 +15,9 @@ public class CategoryService {
 
     public List<Category> listAll(){
         return categoryRepository.findAll();
+    }
+
+    public void save(Category category) {
+        categoryRepository.save(category);
     }
 }
